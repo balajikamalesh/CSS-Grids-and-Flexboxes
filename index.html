@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grids and Flexboxes</title>
+</head>
+<body>
+    <div class="grid-container">
+        <button onclick="setIframe('grid')">CSS Grids</button>
+        <button onclick="setIframe('flex')">CSS Flexboxes</button>
+    </div>
+    <iframe title="out" id="out"></iframe>
+    <script>
+        let iframe = document.getElementsByTagName('iframe')[0];
+        let setIframe = function(mode){
+            if(mode == 'grid'){
+                iframe.setAttribute("src","./cssgrid.html");
+            } else {
+                iframe.setAttribute("src","./flexbox.html");
+            }
+        }
+    </script>
+</body>
+<style>
+    body {
+        margin: 0;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 75px;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        border: 0;
+        font-size: larger;
+    }
+
+    button:hover {
+        background-color: rgb(66, 65, 65);
+        cursor: pointer;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+</html>

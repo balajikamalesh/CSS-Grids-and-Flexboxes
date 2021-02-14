@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grids Cheatsheet</title>
+        <link rel="stylesheet" href="cssgrid.css">
+    </head>
+    <body>
+        <h2>CSS Grid Cheatsheet</h2>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>100px 100px 100px 100px;</strong> (4 column layout with 100px each)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 100px 100px 100px 100px;">
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>repeat(4, 200px);</strong> (shorthand notation)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: repeat(4, 200px);">
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>100px 200px;</strong> (2 column layout, one 100px and other 200px. Since there are 4 divs, 2 are pushed to the next row)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 100px 200px;">
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>100px 200px 300px;</strong> (3 column layout with varying widths, Since there are 4 divs, last is pushed to the next row)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 100px 200px 300px;">
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>1fr 1fr;</strong> (2 column layout, equal proportion, 4 divs)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr;">
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>1fr 1fr 1fr 1fr;</strong> (4 column layout, equal proporation)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>1fr 1.5fr 2fr;</strong> (3 column layout, varying width)
+            <br><em>grid-template-rows</em>: <strong>200px 150px;</strong> (1st row height 200px, 2nd row height 150px)</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 1fr 1.5fr 2fr; grid-template-rows: 200px 150px;">
+            <div class="grid-item grid-item-1" style="height: auto;">1</div>
+            <div class="grid-item grid-item-2" style="height: auto;">2</div>
+            <div class="grid-item grid-item-3" style="height: auto;">3</div>
+            <div class="grid-item grid-item-4" style="height: auto;">4</div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>1fr 1fr 1fr;</strong> (3 column layout, equal proporation)<br><em>grid-auto-rows</em>: <strong>100px;</strong> 
+            (use this when number of rows are unknown, all rows are of height 100px) <br><em>grid-gap</em>: <strong>10px;</strong></p>
+        <h4>Output</h4>
+        <div class="grid-container" 
+             style="grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: 100px;grid-row-gap: 10px; grid-column-gap: 10px;">
+            <div class="grid-item grid-item-1" style="height: auto;"></div>
+            <div class="grid-item grid-item-2" style="height: auto;"></div>
+            <div class="grid-item grid-item-3" style="height: auto;"></div>
+            <div class="grid-item grid-item-4" style="height: auto;"></div>
+            <div class="grid-item grid-item-3" style="height: auto;"></div>
+            <div class="grid-item grid-item-1" style="height: auto;"></div>
+            <div class="grid-item grid-item-2" style="height: auto;"></div>
+            <div class="grid-item grid-item-4" style="height: auto;"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>1fr 1fr 1fr;</strong> (3 column layout, equal proporation) <br><em>grid-auto-rows</em>: <strong>minmax(30px,auto);</strong>  (use this when row height has to be min 30px)<br></p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: minmax(30px,auto);">
+            <div class="grid-item grid-item-1" style="height: auto;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod libero eius vitae 
+                voluptates ipsa iusto eum dolorum veniam corrupti sequi. Magnam maxime rem delectus, cupiditate 
+                fugit autem ducimus rerum consequuntur.</div>
+            <div class="grid-item grid-item-2" style="height: auto;"></div>
+            <div class="grid-item grid-item-3" style="height: auto;"></div>
+            <div class="grid-item grid-item-4" style="height: auto;"></div>
+            <div class="grid-item grid-item-3" style="height: auto;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod libero eius vitae 
+                voluptates ipsa iusto eum</div>
+            <div class="grid-item grid-item-1" style="height: auto;"></div>
+            <div class="grid-item grid-item-2" style="height: auto;"></div>
+            <div class="grid-item grid-item-4" style="height: auto;"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>1fr 1fr 1fr;</strong> (3 column layout, equal proporation) <br><em>grid-auto-rows</em>: <strong>100px;</strong> <br><em>grid-gap</em>: <strong>5px;</strong></p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: 100px; grid-gap: 5px;">
+            <div class="grid-item grid-item-1" style="height: auto;grid-column-start: 1;grid-column-end: 4;">
+                grid-column-start: 1;grid-column-end: 4;</div>
+            <div class="grid-item grid-item-2" style="height: auto;grid-column-start: 1;grid-column-end: 3;">
+                grid-column-start: 1;grid-column-end: 3;</div>
+            <div class="grid-item grid-item-3" style="height: auto;"></div>
+            <div class="grid-item grid-item-4" style="height: auto;"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>100px 200px 100px 200px 100px;</strong> (5 column layout, unequal proporation) <br><em>grid-auto-rows</em>: <strong>100px;</strong> <br><em>grid-gap</em>: <strong>5px;</strong> <br><em>justify-content</em>: <strong>center;</strong></p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 100px 200px 100px 200px 100px; grid-auto-rows: 100px; grid-gap: 5px;justify-content: center;">
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>100px 200px 100px 200px 100px;</strong> (5 column layout, unequal proporation) 
+            <br><em>grid-auto-rows</em>: <strong>100px;</strong> <br><em>grid-gap</em>: <strong>5px;</strong> <br><em>justify-content</em>: <strong>end;</strong> (use 'start' and 'end' for '<em>display</em>: grid;', 'flex-start' and 'flex-end' for '<em>display</em>: flex;')</p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 100px 200px 100px 200px 100px; grid-auto-rows: 100px; grid-gap: 5px;justify-content: end;">
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h4>Style</h4>
+        <p><em>display</em>: <strong>grid;</strong> <br><em>grid-template-columns</em>: <strong>100px 200px 100px 200px 100px;</strong> (5 column layout, unequal proporation) 
+            <br><em>grid-auto-rows</em>: <strong>100px;</strong> <br><em>grid-gap</em>: <strong>5px;</strong> <br><em>justify-content</em>: <strong>space-around;</strong></p>
+        <h4>Output</h4>
+        <div class="grid-container" style="grid-template-columns: 100px 200px 100px 200px 100px; grid-auto-rows: 100px; grid-gap: 5px;justify-content: space-around;">
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+            <div class="grid-item grid-item-1"></div>
+            <div class="grid-item grid-item-2"></div>
+            <div class="grid-item grid-item-3"></div>
+            <div class="grid-item grid-item-4"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+    </body>
+</html>

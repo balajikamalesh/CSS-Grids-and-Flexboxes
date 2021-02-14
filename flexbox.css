@@ -1,0 +1,36 @@
+body {
+    margin: 0 5%;
+    background: beige;
+    font-family: system-ui;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin-top: -15px;
+}
+
+div {
+    text-align: center;
+}
+
+.flexbox-container {
+    display: flex;
+    border: 1px solid black;
+}
+
+.flexbox-item-height {
+    height: 100px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}
+
+.flexbox-item-width {
+    width: 130px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+}

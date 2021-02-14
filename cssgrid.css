@@ -1,0 +1,40 @@
+body {
+    margin: 0 5%;
+    background: beige;
+    font-family: system-ui;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    margin-top: -15px;
+}
+
+.grid-container {
+    display: grid;
+    border: 1px solid gray;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.grid-item-1 {
+    background-color: burlywood;
+}
+
+.grid-item-2 {
+    background-color: coral;
+}
+
+.grid-item-3 {
+    background-color: darkgray;
+}
+
+.grid-item-4 {
+    background-color: deepskyblue;
+}
